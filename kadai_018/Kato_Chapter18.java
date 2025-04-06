@@ -6,11 +6,6 @@ abstract public class Kato_Chapter18 {
 	String familyName = "加藤";
 	String givenName;
 	String address = "東京都中の区○×";
-	
-	public void setGivenName(String givenName) {
-		
-        this.givenName = givenName;
-    }
 
 	//メソッド
 	public void commonIntroduce() {
