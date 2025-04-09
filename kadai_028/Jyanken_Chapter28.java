@@ -5,15 +5,15 @@ import java.util.Scanner;
 
 public class Jyanken_Chapter28 {
 	
+	Scanner scan = new Scanner(System.in);
+	
 	//自分のじゃんけんの手を入力
 	public String getMyChoice() {
-		
-		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("自分のじゃんけんの手を入力しましょう");
 		System.out.println("グーはrockのrを入力しましょう");
 		System.out.println("チョキはscissorsのsを入力しましょう");
-		System.out.println("パーはpeperのpを入力しましょう");
+		System.out.println("パーはpaperのpを入力しましょう");
 		
 		while (true) {
 			String choice = scan.next();
@@ -22,7 +22,6 @@ public class Jyanken_Chapter28 {
 				System.out.println("正しい手を入力してください");
 				continue;
 			} else{
-				scan.close();
 				return choice;
 			}
 		
@@ -58,5 +57,7 @@ public class Jyanken_Chapter28 {
 			System.out.println("自分の負けです");
 			
 		}
+		
+	scan.close();
 	}
 }
