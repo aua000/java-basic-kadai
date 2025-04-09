@@ -1,14 +1,13 @@
 package kadai_028;
 
 import java.util.HashMap;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Jyanken_Chapter28 {
-
+	
+	//自分のじゃんけんの手を入力
 	public String getMyChoice() {
 		
-		//オブジェクトを作成
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("自分のじゃんけんの手を入力しましょう");
@@ -30,14 +29,14 @@ public class Jyanken_Chapter28 {
 		}
 		
 	}
-
+	//pcが出す手を選択
 	public String getRandom() {
-		Random random = new Random();
-		String[] hands = {"r", "s", "p" };
-		int num = random.nextInt(3);
-		return hands[num];
+		String[] pcChoice = {"r", "s", "p" };
+		int random = (int)(Math.floor(Math.random()*3));
+        return pcChoice[random];
 	}
 
+	//勝ち負けを判定して出力
 	public void playGame() {
 		HashMap<String, String> jyankenMap = new HashMap<>();
 		jyankenMap.put("r", "グー");
